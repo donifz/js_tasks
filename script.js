@@ -150,12 +150,26 @@ console.log(checToUpper("dooron"));
 
 /* Write a JavaScript program to draw a smile*/
 
-function smile() {
-  console.log(" ()___()");
-  console.log(" (  *~* )");
-  console.log("(   < >  ) ");
+function smile(div) {
+  smile = document.querySelector(div);
+  let head = document.createElement("div");
+  let eye = document.createElement("div");
+  let eye2 = document.createElement("div");
+  let mouth = document.createElement("div");
+  head.style =
+    "width:200px; height:200px; background-color:yellow; border-radius:50%; position:relative";
+  eye.style =
+    "width:70px; height:60px; position:absolute; background:black; top:30%; left:10%; right:50%; border-radius:10% 10% 45% 45%";
+  eye2.style =
+    "width:70px; height:60px; position:absolute; background:black; top:30%; right:10%; ; border-radius:10% 10% 45% 45%";
+  mouth.style =
+    "width:100px; height:20px; position:absolute; background:#a30e15; top:70%; left:25% ; border-radius:0% 0% 50% 50%";
+  head.appendChild(eye);
+  head.appendChild(eye2);
+  head.appendChild(mouth);
+  smile.appendChild(head);
 }
-smile();
+smile(".smail");
 /* ***************
 
 Задача №4-1
